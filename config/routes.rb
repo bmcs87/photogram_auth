@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # get "/", :controller => "photos", :action => "index"
   root "photos#index"
   
+  devise_for :users
+  
   # Routes for the Comment resource:
   # CREATE
   get "/comments/new", :controller => "comments", :action => "new"
@@ -58,8 +60,10 @@ Rails.application.routes.draw do
   # READ
   get "/users", :controller => "users", :action => "index"
   get "/users/:id", :controller => "users", :action => "show"
+  
+  get "/my_likes", :controller => "photos", :action => "favorites"
 
-  devise_for :users
+
   #Devise is written by devise, which includes a bunch of user sign-in routes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount WebGit::Engine, at: "/rails/git"
