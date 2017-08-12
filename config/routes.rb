@@ -63,6 +63,7 @@ Rails.application.routes.draw do
   
   get "/my_likes", :controller => "photos", :action => "favorites"
 
+  #test
 
   #Devise is written by devise, which includes a bunch of user sign-in routes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
