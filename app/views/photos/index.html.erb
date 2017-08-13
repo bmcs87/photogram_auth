@@ -21,6 +21,7 @@
         <td><%= photo.image %></td>
         <td><%= photo.user_id %></td>
         <td>
+          <i class="fa fa-heart" aria-hidden="true"></i>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
           <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
