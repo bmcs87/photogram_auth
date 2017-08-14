@@ -1,0 +1,14 @@
+<div class="row">
+  <h3><%= @user.username %></h3>
+  
+        <ul class="list-group">
+        <% @user.photos.each do |photo| %>
+          <li class="list-group-item">
+            <%= photo.caption %>
+            <img src="<%= photo.image %>" class="img-responsive">
+          </li>
+        <% end %>
+      </ul>
+  
+</div>
+
