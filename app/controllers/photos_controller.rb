@@ -7,6 +7,8 @@ class PhotosController < ApplicationController
   end
 
   def index
+    #@photos = current_user.photos
+    #@photos += current_user.liked_photos
     @photos = Photo.all
 
     render("photos/index.html.erb")
